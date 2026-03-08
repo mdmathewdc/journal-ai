@@ -108,7 +108,7 @@ Response:
 ## How It Works
 
 1. **Question** is converted to an embedding using OpenAI's text-embedding-3-small model
-2. **PostgreSQL pgvector** performs similarity search using the `<=>` operator (cosine distance)
+2. **PostgreSQL pgvector** performs similarity search using the `<->` operator (L2 distance)
 3. **Top 5 matching entries** are retrieved from the database
 4. **GPT-4o-mini** generates a natural language answer using the retrieved entries as context
 
