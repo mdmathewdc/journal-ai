@@ -17,7 +17,7 @@ router.post("/", async (req: Request, res: Response) => {
     const questionEmbedding = await getEmbedding(question);
 
     const result = await pool.query(
-      "SELECT id, entry, created_at FROM journal_entries ORDER BY embedding <-> $1 LIMIT 5",
+      "SELECT id, entry, created_at FROM journal_entries ORDER BY embedding <=> $1 LIMIT 5",
       [JSON.stringify(questionEmbedding)],
     );
 
