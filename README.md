@@ -94,12 +94,12 @@ Response:
     {
       "id": 2,
       "entry": "tried badminton with coworkers",
-      "created_at": "2026-03-08T06:34:02.000Z"
+      "created_at": "2026-02-20T06:34:02.000Z"
     },
     {
       "id": 4,
       "entry": "played squash at the gym",
-      "created_at": "2026-03-08T06:34:03.000Z"
+      "created_at": "2026-02-28T06:34:03.000Z"
     }
   ]
 }
@@ -126,5 +126,5 @@ curl -X POST http://localhost:3000/journal \
 # Ask a question
 curl -X POST http://localhost:3000/ask \
   -H "Content-Type: application/json" \
-  -d '{"question": "what racket sports did i play?"}'
+  -d '{"question": "what racket sports did i play in the last 2 months?"}'
 ```
